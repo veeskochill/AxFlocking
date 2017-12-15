@@ -1,0 +1,31 @@
+Flocking Doc
+
+~ /wiki ~
+A basic implementation of a flocking algorithm has complexity {\displaystyle O(n^{2})} O(n^{2})
+~ / ~
+
+Alignment - Line up with nearby agents
+	Average out the velocity of nearby agents (given some distance)
+
+Cohesion - steer toward center of mass (long range attraction)
+	Average out position of nearby agents
+
+Separation - steer away from neighbors (short range repulsion)
+	Average out the difference in position between the current
+	agent and the nearby agents
+
+agent.Velocity += alignment*alpha + cohesion*beta + separation*gamma
+
+can we do better at cohesion and separation?
+cohesion = 1/x
+separation = -1/x^2
+
+
+Will spacial partitioning help? Only compute the nearest 'N'?
+-> First we need to find the nearest...
+
+
+M_0 initial setup
+
+M_1 = T_time*M_0 = T_space*M_0 ??// some transformation matrix, operator.
+
